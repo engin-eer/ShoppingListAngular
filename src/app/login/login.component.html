@@ -1,0 +1,19 @@
+<div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">E-mail</label>
+          <input type="email" class="form-control"  aria-describedby="emailHelp" formControlName="email">
+          <div id="emailHelp" class="form-text"></div>
+        </div>
+        <p class="text-danger"><span>{{emailValid}}</span></p>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Şifre</label>
+          <input type="password" class="form-control" formControlName="password">
+        </div>
+        <p class="text-danger"><span>{{passwordValid}}</span></p>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" >
+          <label class="form-check-label" for="exampleCheck1">Beni Hatırla</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Gönder</button>
+      </form>
