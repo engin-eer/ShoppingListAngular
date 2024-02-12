@@ -11,6 +11,7 @@ import { UpdateCategoryComponent } from './pages/category/update-category/update
 import { UpdateProductComponent } from './pages/product/update-product/update-product.component';
 import { AddProductComponent } from './pages/product/add-product/add-product.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -35,7 +36,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
       {path:"product", component:ProductComponent},
 
     ]),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule,
+    RouterModule
   ],
 
 exports:[AdminLayoutComponent,CategoryComponent,DashboardComponent,ProductComponent,AddCategoryComponent,UpdateCategoryComponent,AddProductComponent,UpdateProductComponent],

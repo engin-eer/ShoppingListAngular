@@ -6,6 +6,8 @@ import { UiMainComponent } from './ui/pages/ui-main/ui-main.component';
 
 const routes: Routes = [
   {path:"", component:LoginComponent},
+  {path:"login", component:LoginComponent},
+
 
   {path:"admin", component:AdminMainComponent,children:[
     {path:"", loadChildren:()=> import("./admin/admin.module").then(module=>module.AdminModule)},
